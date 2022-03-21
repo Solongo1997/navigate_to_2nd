@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class SecondScreen extends StatelessWidget {
-  const SecondScreen({Key? key}) : super(key: key);
+  const SecondScreen({
+    Key? key,
+    required this.name,
+  }) : super(key: key);
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +17,7 @@ class SecondScreen extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text("GO back"),
+          child: Text("GO back, $name"),
         )),
       ),
     );
